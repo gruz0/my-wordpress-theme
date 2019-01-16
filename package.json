@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp",
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,13 @@
   "bugs": {
     "url": "https://github.com/gruz0/my-wordpress-theme/issues"
   },
-  "homepage": "https://github.com/gruz0/my-wordpress-theme#readme"
+  "homepage": "https://github.com/gruz0/my-wordpress-theme#readme",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/register": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0"
+  }
 }

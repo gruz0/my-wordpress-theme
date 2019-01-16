@@ -9,8 +9,9 @@
 	<exclude-pattern>*/wpcs/*</exclude-pattern>
 	<exclude-pattern>*/wp-content/*</exclude-pattern>
 	<exclude-pattern>*/node_modules/*</exclude-pattern>
-    <exclude-pattern>*/src/*.css</exclude-pattern>
+	<exclude-pattern>*/src/*.css</exclude-pattern>
 	<exclude-pattern>*/dist/*</exclude-pattern>
+	<exclude-pattern>*/*.js</exclude-pattern>
 
 	<rule ref="WordPress-Core">
 		<exclude name="Generic.WhiteSpace.ScopeIndent.IncorrectExact" />
