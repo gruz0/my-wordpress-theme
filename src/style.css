@@ -4,10 +4,17 @@ Author: gruz0
 Author URI: http://gruz0.ru/
 Description:
 Template: twentyseventeen
-Version: 1.0.0
+Version: 1.1.0
 */
 
 @import url(../twentyseventeen/style.css);
+
+.old-post {
+    padding: 15px;
+    margin: 0 0 1em 0;
+    background-color: #ffc;
+    border: 2px solid #666;
+}
 
 pre {
     padding: 0.5em 1em;
