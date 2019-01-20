@@ -12,3 +12,4 @@ wpcs
 tags
 wp-content
 bundled
+bin/upload.sh

@@ -1,4 +1,4 @@
-.PHONY: help dockerize shell fix_permissions install_linters
+.PHONY: help dockerize shell fix_permissions install_linters upload
 
 help:
 	@echo 'Available targets:'
@@ -6,6 +6,7 @@ help:
 	@echo '  make shell'
 	@echo '  make fix_permissions'
 	@echo '  make install_linters'
+	@echo '  make upload'
 
 dockerize:
 	docker-compose down
@@ -19,3 +20,6 @@ fix_permissions:
 
 install_linters:
 	bin/install_linters_dependencies.sh
+
+upload:
+	bin/upload.sh
