@@ -21,6 +21,35 @@ NOTICE;
 	return $notice . $content;
 }
 
+add_action( 'wp_enqueue_scripts', 'enqueue_likely' );
+
+function enqueue_likely() {
+	wp_register_script( 'likely', get_stylesheet_directory_uri() . '/vendor/likely/likely.js', array(), false, true );
+	wp_enqueue_script( 'likely' );
+
+	wp_register_style( 'likely-css', get_stylesheet_directory_uri() . '/vendor/likely/likely.css' );
+	wp_enqueue_style( 'likely-css' );
+}
+
+add_filter( 'the_content', 'add_likely_buttons_after_post' );
+
+function add_likely_buttons_after_post( $content ) {
+	$likely = '';
+
+	if ( is_single() ) {
+		$likely = <<<NOTICE
+			<div class="likely">
+				<div class="twitter" data-via="gruz0">Твитнуть</div>
+				<div class="facebook">Поделиться</div>
+				<div class="vkontakte">Поделиться</div>
+				<div class="telegram">Отправить</div>
+			</div>
+NOTICE;
+	}
+
+	return $content . $likely;
+}
+
 add_action( 'wp_footer', 'add_google_analytics' );
 
 function add_google_analytics() {
