@@ -1,5 +1,11 @@
 <?php
 
+add_action( 'wp_head', 'add_google_adsense' );
+
+function add_google_adsense() {
+	echo '<script data-ad-client="ca-pub-6111467760015630" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>';
+}
+
 add_filter( 'the_content', 'add_notice_to_old_post' );
 
 function add_notice_to_old_post( $content ) {
